@@ -1,0 +1,136 @@
+.hero-bg{
+  background: url(assets/hero-bg2.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: fit-content;
+  height: 100vh;
+}
+.hero-img{
+  height: 55vh;
+}
+
+@media (max-width: 854px) {
+  .hero-bg{
+    background: url(assets/hero-bg.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: fit-content;
+    height: 100vh;
+  }
+  .card{
+    width: 100%;
+  }
+  .feature-img{
+    height: 50vh !important;
+  }
+  .method{
+    height: 30vh !important;
+  }
+}
+
+.filter{
+  width: 60%;
+  height: 10vh;
+}
+
+.card{
+  width: 16rem;
+  height: 250px !important;
+}
+
+.price{
+  text-decoration: line-through;
+}
+
+.feature-img{
+  height: 85vh;
+}
+
+.feature-line{
+  background-image: url(assets/line.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.method{
+  height: 34vh;
+}
+
+
+
+.container {
+  width: 217px;
+  height: 190px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.gradient-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 80%;
+  background: linear-gradient(-45deg, #ddddd2 10%, #acaca32e 70%);
+  border-radius: inherit;
+  transform: scaleX(1.5);
+  transition: background 0.5s ease-in-out, width 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.content {
+  position: relative;
+  width: 98%;
+  height: 98%;
+  border-radius: inherit; /* Inherit the container's border radius */
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease-in-out;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.description {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+.container:hover .gradient-background {
+  width: 140%;
+  opacity: 100%;
+  background: linear-gradient(
+    -45deg,
+    #5E604B 30%,
+    #ffe5a3b2 50%,
+    #B6977A 90%
+  );
+}
+
+.container:hover .content {
+  background: linear-gradient(to bottom, #fbf8f3bd, #fbf8f3);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+Navbar + div {
+  justify-content: center !important;
+}

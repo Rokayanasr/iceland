@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Cairo;
+  src: url(/fonts/Cairo-VariableFont_slnt,wght.ttf);
+}
+
+@font-face {
+  font-family: Monadi;
+  src: url(/fonts/Monadi.ttf);
+}
+@font-face {
+  font-family: Reqaa;
+  src: url(/fonts/Gulzar-Regular.ttf);
+}
+.monadi{
+  font-family: "Monadi", sans-serif;
+}
+.reqaa{
+  font-family: "Reqaa", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
+  @apply bg-whity;
+}
+
+@layer base {
+  h1 {
+      @apply text-4xl md:text-5xl font-bold text-white;
+  }
+  h2 {
+      @apply text-3xl md:text-4xl text-white;
+  }
+  h3 {
+      @apply text-2xl md:text-3xl text-white;
+  }
+  h4 {
+      @apply text-xl md:text-2xl text-white;
+  }
+  h5 {
+      @apply text-lg md:text-xl text-white;
+  }
+  p,
+  h6 {
+      @apply text-base md:text-lg text-white;
+  }
+}
+@layer components {
+  .btn {
+      @apply bg-primary hover:bg-primaryHover transition-all duration-300 ease-in-out lg:text-2xl text-black font-bold py-3 px-5 rounded-full;
+  }
+}
+.my-container {
+  @apply flex md:py-24 py-20 md:px-20 px-4 items-center flex-col;
+}
+.nav-btn {
+  @apply hover:bg-primary hover:text-whity transition-all flex items-center cursor-pointer duration-300 ease-in-out md:text-lg text-base  font-bold py-2 px-3 rounded-full;
+}
+.text-stroke-3 {
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+}
+
+html {
+  width: 100% !important;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
