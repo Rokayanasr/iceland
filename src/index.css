@@ -67,7 +67,7 @@ body {
   text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
-html {
+html, body {
   width: 100% !important;
   overflow-x: hidden;
   scroll-behavior: smooth;
