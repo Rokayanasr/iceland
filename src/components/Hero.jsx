@@ -377,7 +377,7 @@ function Hero() {
                     <ol className='mb-10 items-start flex sm:flex-row flex-col gap-10 md:gap-0'>
                         <li data-aos='fade-down' className='relative basis-1/3 method'>
                             <div className='flex items-center justify-center'>
-                                <div className='z-10 flex items-center justify-center w-8 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
+                                <div className='z-10 flex items-center justify-center w-10 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
                                     <h5 className='font-bold md:text-start text-center'>1</h5>
                                 </div>
                                 <div className='hidden sm:flex w-full bg-whity h-0.5 dark:bg-gray-700' />
@@ -399,7 +399,7 @@ function Hero() {
                         </li>
                         <li data-aos='fade-up' className='relative basis-1/3 method'>
                             <div className='flex items-center justify-center'>
-                                <div className='z-10 flex items-center justify-center w-8 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
+                                <div className='z-10 flex items-center justify-center w-10 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
                                     <h5 className='font-bold md:text-start text-center'>2</h5>
                                 </div>
                                 <div className='hidden sm:flex w-full bg-whity h-0.5 dark:bg-gray-700' />
@@ -420,7 +420,7 @@ function Hero() {
                         </li>
                         <li data-aos='fade-down' className='relative basis-1/3 method'>
                             <div className='flex items-center justify-center'>
-                                <div className='z-10 flex items-center justify-center w-8 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
+                                <div className='z-10 flex items-center justify-center w-10 h-10 bg-primary rounded-full ring-0 ring-whity sm:ring-8 shrink-0'>
                                     <h5 className='font-bold md:text-start text-center'>3</h5>
                                 </div>
                                 <div className='hidden sm:flex w-full bg-whity h-0.5 dark:bg-gray-700' />
