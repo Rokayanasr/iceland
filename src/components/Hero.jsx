@@ -371,8 +371,8 @@ function Hero() {
                 <div className='flex flex-col gap-10'>
                     {/* Title and Subtitle */}
                     <div className='text-center'>
-                        <h2 className='text-3xl font-bold text-primary mb-4'>كيفية الحصول علي استشارة</h2>
-                        <h5 className='text-secondaryDark'>اتبع الخطوات التالية لإتمام عملية الدفع بنجاح من اجل الحصول علي استشارة</h5>
+                        <h2 className='text-3xl font-bold text-primary mb-4'>كيفية الحصول على استشارة</h2>
+                        <h5 className='text-secondaryDark'>اتبع الخطوات التالية لإتمام عملية الدفع بنجاح من اجل الحصول على استشارة</h5>
                     </div>
                     <ol className='mb-10 items-start flex sm:flex-row flex-col gap-10 md:gap-0'>
                         <li data-aos='fade-down' className='relative basis-1/3 method'>
