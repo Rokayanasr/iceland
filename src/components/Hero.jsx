@@ -645,8 +645,8 @@ function Hero() {
             </section>
 
             {/* CONTACT US */}
-            <section id='contactus' className='my-container gap-10 bg-primaryLight'>
-                <div data-aos='fade-left'>
+            <section  className='my-container gap-10 bg-primaryLight'>
+                <div data-aos='fade-left id='contactus''>
                     <h1 className='text-primary text-center monadi mb-4 '>تواصل معنا</h1>
                     <h4 className='lg:my-0 my-2 text-secondaryDark font-semibold text-center tracking-wide leading-6'>
                         اذا وجدت اي صعوبة او مشكلة في الاشتراك في الخدمة يمكنك التواصل معنا و متابعتنا عبر قنوات الاتصال التالية:
