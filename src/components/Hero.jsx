@@ -449,10 +449,10 @@ function Hero() {
 
             {/* FORM */}
             <section id='form'>
-                <h2 className='block md:hidden text-center text-primary monadi pt-10 pb-8'>سجل الان و احصل علي استشارتك للسفر الي ايسلندا</h2>
+                <h2 className='block md:hidden text-center text-primary monadi pt-10 pb-8'>سجل الان و احصل على استشارتك للسفر الى ايسلندا</h2>
                 <div className='flex md:flex-row flex-col'>
                     <div data-aos='fade-left' className='my-container flex items-center justify-center bg-whity basis-1/2'>
-                        <h2 className='hidden md:block leading-normal text-center text-primary monadi mb-8'>سجل الان و احصل علي استشارتك للسفر الي ايسلندا</h2>
+                        <h2 className='hidden md:block leading-normal text-center text-primary monadi mb-8'>سجل الان و احصل على استشارتك للسفر الى ايسلندا</h2>
                         <div className='rounded-lg w-full'>
                             <form encType='multipart/form-data' method='post' onSubmit={formik.handleSubmit}>
                                 <div className='grid grid-cols-1 md:grid-cols-2 md:gap-4'>
