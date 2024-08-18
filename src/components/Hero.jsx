@@ -222,8 +222,10 @@ function Hero() {
                         </button>
                     </div>
                     {/* CARDS */}
-                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8
-                    '>
+                    <div
+                        className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8
+                    '
+                    >
                         {filteredVoiceCalls.map((call, index) => (
                             <div
                                 data-aos='flip-right'
@@ -631,139 +633,94 @@ function Hero() {
                                 {/* Submit button */}
                                 <button
                                     type='submit'
-                                    className='inline-block w-full rounded-full bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-whity shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2'
+                                    className='inline-block w-full rounded-full bg-primary px-6 pb-2 pt-2.5 h-12 text-md font-medium uppercase leading-normal text-whity shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2'
                                 >
                                     سجل الان
                                 </button>
                             </form>
                         </div>
                     </div>
-                    <div className='basis-1/2'>
-                        <img className="h-full" src={formImg} alt='' />
+                    <div className='basis-1/2 md:order-last order-first'>
+                        <img className='h-full' src={formImg} alt='' />
                     </div>
                 </div>
             </section>
 
             {/* CONTACT US */}
-            <section  className='my-container gap-10 bg-primaryLight'>
-                <div data-aos='fade-left'id='contactus'>
-                    <h1 className='text-primary text-center monadi mb-4 '>تواصل معنا</h1>
-                    <h4 className='lg:my-0 my-2 text-secondaryDark font-semibold text-center tracking-wide leading-6'>
-                        اذا وجدت اي صعوبة او مشكلة في الاشتراك في الخدمة يمكنك التواصل معنا و متابعتنا عبر قنوات الاتصال التالية:
-                    </h4>
-                </div>
-
-                <div className='contact-container md:flex-row flex-col w-full gap-10'>
-                    <a data-aos='fade-up' href='https://www.tiktok.com/@maramiceland?_t=8oZV26Cb1kW&_r=1' className='container'>
-                        {/* Underlying Gradient Div*/}
-                        <div className='gradient-background' />
-                        {/* Main Content Div */}
-                        <div className='content bg-whity'>
-                            <svg className='h-12 fill-primary' id='fi_15713399' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
-                                <rect height='427.97' rx='71.15' width='427.97' x='42.01' y='42.95'></rect>
-                                <path
-                                    d='m389.39 221.92v-57.07c-74.6-3.15-77-70.94-77-77.31v-.48h-57.66v222.27a45.66 45.66 0 1 1 -32.36-43.71v-58.86a104.57 104.57 0 0 0 -13.32-.85 103.42 103.42 0 1 0 103.42 103.42c0-1.45 0-2.89-.1-4.32v-109.45c26.55 24.29 77.02 26.36 77.02 26.36z'
-                                    fill='#00f6ef'
-                                ></path>
-                                <path
-                                    d='m406.37 236v-57.1c-74.61-3.15-77-70.94-77-77.31v-.48h-57.66v222.27a45.66 45.66 0 1 1 -32.36-43.7v-58.87a104.57 104.57 0 0 0 -13.35-.81 103.42 103.42 0 1 0 103.45 103.38c0-1.45 0-2.89-.1-4.32v-109.45c26.55 24.29 77.02 26.39 77.02 26.39z'
-                                    fill='#fff'
-                                ></path>
-                                <g fill='#ff004f'>
-                                    <path d='m313.82 101.11c2.78 15.14 10.9 38.81 34.57 52.66-18.09-21.07-19-48.26-19-52.18v-.48z'></path>
-                                    <path d='m406.37 236v-57.1a106.46 106.46 0 0 1 -17-2v44.95s-50.47-2.07-77-26.36v109.42c.06 1.43.1 2.87.1 4.32a103.43 103.43 0 0 1 -160.72 86.1 103.41 103.41 0 0 0 177.7-71.95c0-1.45 0-2.89-.1-4.32v-109.45c26.55 24.29 77.02 26.39 77.02 26.39z'></path>
-                                    <path d='m222.37 265.53a45.69 45.69 0 0 0 -33.19 84.85 45.69 45.69 0 0 1 50.17-70.7v-58.87a104.57 104.57 0 0 0 -13.35-.81c-1.23 0-2.44 0-3.66.07z'></path>
-                                </g>
-                            </svg>
-                            <a href='https://khamsat.com/redirect?url=aHR0cHM6Ly95b3V0dWJlLmNvbS9jaGFubmVsL1VDZzYybTF3TTNWdDJqektWLW9XUXFlUQ=='>
-                                <h6 className='pt-3 contact text-primary font-semibold'>maramiceland</h6>
-                            </a>
-                        </div>
+            <section className='my-container gap-10 bg-primaryLight'>
+                <div className='flex flex-col gap-6 items-center justify-center'>
+                    <div data-aos='fade-left' id='contactus'>
+                        <h1 className='text-primary text-center monadi mb-4 '>تواصل معنا</h1>
+                        <h4 className='lg:my-0 my-2 text-secondaryDark font-semibold text-center tracking-wide leading-6'>
+                            اذا وجدت اي صعوبة او مشكلة في الاشتراك في الخدمة يمكنك التواصل معنا و متابعتنا عبر
+                            <span className='font-black'> {""}الانستجرام</span>
+                        </h4>
+                    </div>
+                    <a href='https://www.instagram.com/maramiceland/'>
+                        <button className='bg-primary heartbeat w-44 h-14 rounded-full text-whity'>الذهاب للانستجرام</button>
                     </a>
-                    <a data-aos='fade-down' href='https://khamsat.com/redirect?url=aHR0cHM6Ly95b3V0dWJlLmNvbS9jaGFubmVsL1VDZzYybTF3TTNWdDJqektWLW9XUXFlUQ==' className='container'>
-                        {/* Underlying Gradient Div*/}
-                        <div className='gradient-background' />
-                        {/* Main Content Div */}
-                        <div className='content bg-whity'>
-                            <svg className='h-12 fill-primary' viewBox='0 -71 511.99912 511' xmlns='http://www.w3.org/2000/svg' id='fi_1384086'>
-                                <path d='m255.980469 370.492188c-.042969 0-.089844 0-.136719 0-15.449219-.105469-152.027344-1.351563-190.722656-11.816407-27.042969-7.269531-48.390625-28.59375-55.679688-55.640625-10.125-38.011718-9.4804685-111.195312-9.410156-117.039062-.0664062-5.816406-.71875-79.605469 9.378906-117.929688.011719-.035156.019532-.074218.03125-.109375 7.207032-26.738281 29.035156-48.722656 55.613282-56.011719.066406-.019531.136718-.035156.203124-.054687 38.257813-10.054687 175.105469-11.285156 190.585938-11.390625h.277344c15.488281.105469 152.429687 1.351562 190.769531 11.832031 26.972656 7.25 48.304687 28.546875 55.613281 55.558594 10.503906 38.351563 9.53125 112.300781 9.425782 118.542969.074218 6.148437.6875 78.675781-9.378907 116.878906-.007812.039062-.019531.074219-.027343.109375-7.292969 27.046875-28.636719 48.371094-55.710938 55.648437-.035156.011719-.074219.019532-.109375.03125-38.253906 10.050782-175.105469 11.28125-190.582031 11.390626-.046875 0-.09375 0-.140625 0zm-207.90625-292.167969c-8.890625 33.828125-8.050781 106.675781-8.042969 107.410156v.527344c-.265625 20.203125.667969 78.710937 8.046875 106.421875 3.578125 13.269531 14.105469 23.78125 27.457031 27.371094 28.550782 7.722656 139.789063 10.152343 180.445313 10.4375 40.761719-.285157 152.164062-2.648438 180.503906-10.0625 13.308594-3.601563 23.800781-14.078126 27.402344-27.363282 7.386719-28.117187 8.3125-86.339844 8.042969-106.414062 0-.210938 0-.421875.003906-.632813.367187-20.445312-.355469-79.636719-8.011719-107.570312-.007813-.027344-.015625-.054688-.019531-.082031-3.59375-13.328126-14.125-23.839844-27.476563-27.429688-28.273437-7.730469-139.691406-10.152344-180.445312-10.4375-40.734375.285156-152.027344 2.644531-180.453125 10.050781-13.097656 3.632813-23.863282 14.519531-27.453125 27.773438zm435.136719 219.894531h.011718zm-278.210938-31.726562v-161.996094l140 81zm0 0'></path>
-                            </svg>
-                            <h6 className='pt-3 contact text-primary font-semibold'>maramiceland</h6>
-                        </div>
-                    </a>
-                    <a data-aos='fade-up' href='https://www.instagram.com/maramiceland/' className='container'>
-                        {/* Underlying Gradient Div*/}
-                        <div className='gradient-background' />
-                        {/* Main Content Div */}
-                        <div className='content bg-whity'>
-                            <svg
-                                className='h-10 fill-primary'
-                                version='1.1'
-                                id='fi_717392'
-                                xmlns='http://www.w3.org/2000/svg'
-                                xmlnsXlink='http://www.w3.org/1999/xlink'
-                                x='0px'
-                                y='0px'
-                                viewBox='0 0 409.61 409.61'
-                                style={{ enableBackground: "new 0 0 409.61 409.61" }}
-                                xmlSpace='preserve'
-                            >
-                                <g>
+                    {/* <div className='contact-container md:flex-row flex-col w-full gap-10'>
+                        <a data-aos='fade-up' href='https://www.instagram.com/maramiceland/' className='container'>
+                            <div className='gradient-background' />
+                            <div className='content bg-whity'>
+                                <svg
+                                    className='h-10 fill-primary'
+                                    version='1.1'
+                                    id='fi_717392'
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    xmlnsXlink='http://www.w3.org/1999/xlink'
+                                    x='0px'
+                                    y='0px'
+                                    viewBox='0 0 409.61 409.61'
+                                    style={{ enableBackground: "new 0 0 409.61 409.61" }}
+                                    xmlSpace='preserve'
+                                >
                                     <g>
-                                        <path
-                                            d='M307.205,0h-204.8C46.09,0,0.005,46.085,0.005,102.4v204.81c0,56.3,46.085,102.4,102.4,102.4h204.8
+                                        <g>
+                                            <path
+                                                d='M307.205,0h-204.8C46.09,0,0.005,46.085,0.005,102.4v204.81c0,56.3,46.085,102.4,102.4,102.4h204.8
 			c56.315,0,102.4-46.1,102.4-102.4V102.4C409.605,46.085,363.52,0,307.205,0z M375.47,307.21c0,37.632-30.612,68.265-68.265,68.265
 			h-204.8c-37.637,0-68.265-30.633-68.265-68.265V102.4c0-37.642,30.628-68.265,68.265-68.265h204.8
 			c37.653,0,68.265,30.623,68.265,68.265V307.21z'
-                                        />
+                                            />
+                                        </g>
                                     </g>
-                                </g>
-                                <g>
                                     <g>
-                                        <circle cx='315.755' cy='93.865' r='25.6' />
+                                        <g>
+                                            <circle cx='315.755' cy='93.865' r='25.6' />
+                                        </g>
                                     </g>
-                                </g>
-                                <g>
                                     <g>
-                                        <path
-                                            d='M204.805,102.4c-56.566,0-102.4,45.839-102.4,102.4c0,56.54,45.834,102.41,102.4,102.41c56.55,0,102.4-45.87,102.4-102.41
+                                        <g>
+                                            <path
+                                                d='M204.805,102.4c-56.566,0-102.4,45.839-102.4,102.4c0,56.54,45.834,102.41,102.4,102.41c56.55,0,102.4-45.87,102.4-102.41
 			C307.205,148.239,261.355,102.4,204.805,102.4z M204.805,273.075c-37.699,0-68.265-30.566-68.265-68.275
 			s30.566-68.265,68.265-68.265s68.265,30.556,68.265,68.265S242.504,273.075,204.805,273.075z'
-                                        />
+                                            />
+                                        </g>
                                     </g>
-                                </g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                                <g></g>
-                            </svg>
-                            <a href='https://khamsat.com/redirect?url=aHR0cHM6Ly95b3V0dWJlLmNvbS9jaGFubmVsL1VDZzYybTF3TTNWdDJqektWLW9XUXFlUQ=='>
-                                <h6 className='pt-3 contact text-primary font-semibold'>maramiceland</h6>
-                            </a>
-                        </div>
-                    </a>
-                    <a data-aos='fade-left' className='container' href='https://www.facebook.com/profile.php?id=100004284966321'>
-                        {/* Underlying Gradient Div*/}
-                        <div className='gradient-background' />
-                        {/* Main Content Div */}
-                        <div className='content bg-whity'>
-                            <svg className='h-10 fill-primary' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' id='fi_1051309'>
-                                <path d='m437 0h-362c-41.351562 0-75 33.648438-75 75v362c0 41.351562 33.648438 75 75 75h151v-181h-60v-90h60v-61c0-49.628906 40.371094-90 90-90h91v90h-91v61h91l-15 90h-76v181h121c41.351562 0 75-33.648438 75-75v-362c0-41.351562-33.648438-75-75-75zm0 0'></path>
-                            </svg>
-                            <h6 className='pt-3 contact text-primary font-semibold'>مرام حكايات ايسلندا والعالم</h6>
-                        </div>
-                    </a>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                    <g></g>
+                                </svg>
+                                <a href='https://www.instagram.com/maramiceland/'>
+                                    <h6 className='pt-3 contact text-primary font-semibold'>maramiceland</h6>
+                                </a>
+                            </div>
+                        </a>
+                    </div> */}
                 </div>
             </section>
             <ToastContainer />
