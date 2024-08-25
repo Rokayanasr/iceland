@@ -23,7 +23,11 @@ function Hero() {
             .max(15, "رقم الهاتف يجب ألا يتجاوز 15 رقم")
             .required("رقم الهاتف مطلوب"),
         email: Yup.string().email("البريد الإلكتروني غير صحيح").required("البريد الإلكتروني مطلوب"),
-        image: Yup.mixed().required("الصورة مطلوبة"),
+        image: Yup.mixed()
+            .required("الصورة مطلوبة")
+            .test("fileSize", "حجم الصورة يجب ألا يتجاوز 5 ميجابايت", (value) => {
+                return value && value.size <= 5 * 1024 * 1024;
+            }),
     });
 
     const formik = useFormik({
@@ -36,42 +40,47 @@ function Hero() {
             image: null,
         },
         validationSchema,
-        onSubmit: (values) => {
+        onSubmit: async (values) => {
             const formData = new FormData();
-            console.log(formData);
+
             Object.keys(values).forEach((key) => {
-                formData.append(key, values[key]);
+                console.log(values);
+                if (key === "image" && values[key]) {
+                    formData.append(key, values[key]);
+                } else if (key !== "image") {
+                    formData.append(key, values[key]);
+                }
             });
+
             const loadingToast = toast.loading("Sending email...");
 
-            axios
-                .post("http://localhost:5000/send-email", formData, {
+            try {
+                const response = await axios.post("https://iceland-server-ecru.vercel.app/send-email", formData, {
                     headers: {
                         "Content-Type": "multipart/form-data",
                     },
-                })
-                .then((response) => {
-                    formik.resetForm();
-                    formik.setFieldValue("image", "");
-                    toast.update(loadingToast, {
-                        render: "!تم ارسال البيانات بنجاح",
-                        type: "success",
-                        isLoading: false,
-                        autoClose: 5000,
-                    });
-                    console.log(response);
-                })
-                .catch((error) => {
-                    console.log(error);
-                    toast.update(loadingToast, {
-                        render: "خطأ في ارسال البيانات",
-                        type: "error",
-                        isLoading: false,
-                        autoClose: 5000,
-                    });
                 });
+
+                formik.resetForm();
+                toast.update(loadingToast, {
+                    render: "تم ارسال البيانات بنجاح",
+                    type: "success",
+                    isLoading: false,
+                    autoClose: 5000,
+                });
+                console.log(response);
+            } catch (error) {
+                console.log(error);
+                toast.update(loadingToast, {
+                    render: "خطأ في ارسال البيانات",
+                    type: "error",
+                    isLoading: false,
+                    autoClose: 5000,
+                });
+            }
         },
     });
+
     const services = [
         "الدراسة - مكالمة صوتية",
         "الدراسة - استشارة كتابية",
@@ -631,7 +640,7 @@ function Hero() {
                                 </div>
 
                                 {/* Submit button */}
-                                <button
+                                <button 
                                     type='submit'
                                     className='inline-block w-full rounded-full bg-primary px-6 pb-2 pt-2.5 h-12 text-md font-medium uppercase leading-normal text-whity shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2'
                                 >
