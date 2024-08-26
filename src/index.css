@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
 @font-face {
   font-family: Cairo;
   src: url(/fonts/Cairo-VariableFont_slnt,wght.ttf);
